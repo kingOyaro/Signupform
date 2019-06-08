@@ -1,0 +1,33 @@
+<?php
+include('login.php'); // Includes Login Script
+if(isset($_SESSION['login_user'])){
+header("location: profile.php"); // Redirecting To Profile Page
+}
+?>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Login</title>
+<link href="login.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+   <div class="signin">
+
+	<form action="login.php" method="POST"><!--to connect to database file-->
+		<h2 style="color:#fff;">Log In</h2>
+		<input type="text" name="username" placeholder="username" required /><br /><br />
+		<input type="password" name="password"  placeholder="Password" required /><br /><br />
+		<input type="submit" name="submit" value="Log In" /></a><br /><br />
+		<div id="container">
+		<a href="" style=" margin-right:0px; font-size:13px; font-family:Tahoma, Geneva, sans-serif;">Reset password?</a>
+			<a href="" style=" margin-left:30px; font-size:13px; font-family:Tahoma, Geneva, sans-serif;">Forgot password</a>
+			</div><br /><br /><br /><br /><br /><br />
+		Don't have account?<a href="Signup.html" style="font-family:'Play', sans-serif;">&nbsp;Sign Up</a>
+
+	</form>
+	</div>
+
+</body>
+</html
